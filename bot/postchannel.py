@@ -37,7 +37,7 @@ def facts_to_str(user_data: Dict[str, str]):
         f'🏷🔖<b>{nombre}</b>\n🔗 <b>Link:</b> {link}\n♨️ <b>Descripción:</b> {descripcion}\n\n'
         f'\n📤 <b>Contenido a subir:</b> {contenido}\n🎞️ <b>Palabras extras del creador:</b> {palabras}\n'
         f'\n👍  <b>Valoración:</b> {valoracion}\n\n'
-        '🔷🔹🔹🔹🔹🔹🔹🔹🔹🔹🔹🔹🔷\n🌐 <a href="https://t.me/Program_Plus_channel"><b>Program Plus Channel</b></a> 🌐'
+        '🔷🔹🔹🔹🔹🔹🔹🔹🔹🔹🔹🔷\n🌐 <a href="https://t.me/Program_Plus_channel"><b>Program Plus Channel</b></a> 🌐'
     )
 
 

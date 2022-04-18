@@ -35,7 +35,7 @@ def facts_to_str(user_data: Dict[str, str]):
     valoracion = user_data['valoracion']
     return (
         f'🏷🔖<b>{nombre}</b>\n🔗 <b>Link:</b> {link}\n♨️ <b>Descripción:</b> {descripcion}\n\n'
-        f'\n📤 <b>Contenido a subir:</b> {contenido}\n🎞️ <b>Palabras extras del creador:</b> {palabras}\n🎞 <b>Temporada:</b> {temporada}\n'
+        f'\n📤 <b>Contenido a subir:</b> {contenido}\n🎞️ <b>Palabras extras del creador:</b> {palabras}\n'
         f'\n👍  <b>Valoración:</b> {valoracion}\n\n'
         '🔷🔹🔹🔹🔹🔹🔹🔹🔹🔹🔹🔹🔹🔷\n🌐 <a href="https://t.me/Program_Plus_channel"><b>Program Plus Channel</b></a> 🌐'
     )
@@ -120,7 +120,7 @@ def palabras(update: Update, context: CallbackContext):
     text = update.message.text
     context.user_data['palabras'] = text
     update.message.reply_text(
-        f'Enviame la valoracíon 👍 👎.'
+        f'Enviame la valoracíon 10/10.'
     )
     return con.VALORACION
 
@@ -131,7 +131,7 @@ def valoracion(update: Update, context: CallbackContext):
     context.user_data['valoracion'] = text
 
     update.message.reply_text(
-        text=f"✅ Plantilla creada correctamente\n<b>Resultado:</b>\n\n{facts_to_str(context.user_data)}".format(user=user_id, name=first_name) +
+        text=f"✅ Plantilla creada correctamente\n<b>Resultado:</b>\n\n{facts_to_str(context.user_data)}" +
             "\n\nPulsa el botón de debajo para enviar la plantilla. 📢",
         parse_mode=ParseMode.HTML,
         reply_markup=ReplyKeyboardMarkup([['Enviar plantilla ✅']],
